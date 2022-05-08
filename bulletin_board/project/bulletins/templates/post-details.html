@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table>
+        <tr>
+            <td>
+                <h2>{{ post.title }}</h2>
+                <h4><a href="{{ post.category.get_absolute_url }}">{{ post.category }}</a></h4>
+                <p>{{ post.content|safe }}</p>
+                <a href="{% url 'post_edit' post.slug %}">Редактировать</a>
+                <div><a href="{% url 'add-comment' post.slug %}">Добавить отклик</a></div>
+                <div align="center"><h3>Отклики</h3></div>
+                {% for comment in comments %}
+                    <tr>
+                        <td>
+                            <h5>by: {{ comment.author }}</h5>
+                            <p>{{ comment.text }}</p>
+                            <hr>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+        </td>
+        </tr>
+    </table>
+{% endblock content %}

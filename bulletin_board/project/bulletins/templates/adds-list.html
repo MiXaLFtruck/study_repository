@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table>
+    {% for bulletin in bulletins %}
+        <tr>
+            <td>
+                <h2>{{ bulletin.title }}</h2>
+                <h4><a href="{{ bulletin.category.get_absolute_url }}">{{ bulletin.category }}</a></h4>
+                <p>{{ bulletin.content|safe|truncatewords:120 }}</p>
+                <a href="{{ bulletin.get_absolute_url }}">Читать далее...</a><hr>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock content %}

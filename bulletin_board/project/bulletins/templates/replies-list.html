@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="get">
+        {{ filter.form.as_p }}
+        <input type="submit" value="Выбрать">
+    </form>
+    <table>
+    {% for comment in comments %}
+        <tr>
+            <td>
+                <h5>by: {{ comment.author }}</h5>
+                <p>{{ comment.text }}</p>
+                <h4><a href="{{ comment.post.get_absolute_url }}">{{ comment.post|truncatewords:5 }}...</a></h4>
+                <div align="right"><a href="{% url 'delete_comment' comment.id %}">Удалить отклик</a></div>
+                {% if not comment.approved %}
+                    <div align="right"><a href="{% url 'approve_comment' comment.id %}">Принять отклик</a></div>
+                {% endif %}
+                <hr>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock content %}

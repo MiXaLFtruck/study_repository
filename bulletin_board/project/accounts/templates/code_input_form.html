@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Вам на почту был выслан проверочный код. Введите его в поле ниже, чтобы завершить регистрацию</h3>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Завершение регистрации</button>
+</form>
+
+{% endblock %}
