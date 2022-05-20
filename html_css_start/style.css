@@ -1,0 +1,52 @@
+html, body{
+    height: 100%;
+    font-family: "Calibri";
+}
+
+.header{
+    background: #101010;
+    color: white;
+}
+
+.inner-header{
+    height: 100%;
+    margin: 0;
+}
+
+.inner-header table{
+    width: 100%;
+}
+
+.navigation{
+    float: right;
+    padding: 0; margin: 0;
+}
+
+.navigation li{
+    vertical-align: middle;
+    display: inline;
+    font-size: 25px;
+    list-style-type: none;
+}
+
+.navigation a{
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.navigation a:hover{
+    background-color: gray;
+    color: #101010;
+}
+
+img.in-text-left{
+    float: left;
+    margin: 5px 10px;
+    width: 300px;
+}
+
+.content table{
+    text-align: center;
+    width: 50%;
+}
