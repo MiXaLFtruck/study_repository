@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    font-size: 18px;
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+h4 {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.align-center {
+    text-align: center
+}
+
+.messages-box {
+    width: 80%;
+    display: inline;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    display: inline-block;
+    border-right: 2px solid rgb(180, 178, 178);
+}
+
+.inline {
+    max-width: 100%;
+    display: block;
+}
+
+
+.circle-image{
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+  }

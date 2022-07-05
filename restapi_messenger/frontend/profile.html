@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="env.js"></script>
+    <script src="requests.js"></script>
+    <title>My profile</title>
+</head>
+<body>
+    <div class="align-center">
+        <h2>Мой профиль</h2>
+        <form>
+            <div>
+                <label for="username">Имя пользователя</label>
+                <input type="text" id="username" value="">
+            </div>
+            <div style="padding-top: 25px;">
+                <label for="avatar">Изменить аватар</label>
+                <input type="file" id="avatar" accept="image/png, image/jpeg">
+                <!-- <button id="avatar-button">Выбрать файл</button> -->
+                <p><input type="image" id="submit-button" src="button.png" width="150px"></p>
+            </div>
+        </form>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="env.js"></script>
+    <script src="requests.js"></script>
+<title>New Room</title>
+</head>
+<body>
+    <h2 class="align-center">Введите данные новой беседы<br><small>все поля обязательны для заполнения</small></h2>
+    <div class="align-center">
+        <form id="form">
+            <label for="title">Название беседы</label>
+            <input type="text" id="title"><br>
+            <label for="users">Участники</label>
+            <select id="users" multiple="" name="users[]">
+            </select>
+            <input type="checkbox" id="is_direct" style="display: none;"><br><br>
+            <input type="submit" value="Создать беседу">
+        </form>
+    </div>
+    <script src="new-room.js"></script>
+</body>
+</html>

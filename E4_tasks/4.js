@@ -8,7 +8,7 @@ function Appliance(){
 
 Appliance.prototype.switch = function (){
     this.pluggedIn = !this.pluggedIn
-    if (this.pluggedIn === true)
+    if (this.pluggedIn)
         console.log(`${this.name} включен`)
     else
         console.log(`${this.name} выключен`)
