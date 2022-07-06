@@ -41,6 +41,9 @@ const roomUsers = document.getElementById("users");
             .then((response) => {
                 console.log(response);
             })
+            .then(() => {
+                location.href = `messenger.html?user=${sessionStorage.getItem('currentUserID')}`;
+            })
             .catch((err) => console.error(err))
     });
 })();

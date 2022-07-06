@@ -52,3 +52,22 @@ const postRequest = (url, body) => {
         // .then((json) => { return json; })
         .catch((ev) => { alert('Ошибка запроса: ' + ev) });
 }
+
+// // DELETE-запрос
+const delRequest = (url) => {
+    const options = {
+        method: 'DELETE',
+        mode: 'cors',
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Origin': 'http://127.0.0.1:8000'
+        }
+        }    
+    return fetch(url, options)
+        .then((response) => {
+            return response.json();
+        })
+        .then((json) => { return json; })
+        .catch((ev) => { alert('Ошибка запроса: ' + ev) });
+}
